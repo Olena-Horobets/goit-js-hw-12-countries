@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Заголовок страницы</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
@@ -11,7 +18,21 @@
       crossorigin="anonymous"
     />
   </head>
+
   <body>
+    <h1 class="main-title">Countries data search service</h1>
+
+    <div class="countries">
+      <h2 class="countries__title">Enter country name</h2>
+      <input class="countries__search-input js-input" type="text" name="query" autocomplete="off" />
+
+      <ul class="countries__list js-list">
+        <!-- <li>Lorem ipsum dolor sit, enim commodi quas ex pariatu</li>
+        <li>yyyy</li>
+        <li>Lorem ipsum dolor sit, enim commodi quas ex pariatu</li> -->
+      </ul>
+    </div>
+
     <script src="./index.js"></script>
   </body>
 </html>

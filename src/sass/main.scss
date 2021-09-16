@@ -1,7 +1,44 @@
-/*
- * Главный файл стилей.
- * Все паршалы подключаются сюда.
- */
+body {
+  font-family: 'Titillium Web', sans-serif;
+}
 
-// Стили для файла с примером HTML-фрагмента
-@import './example';
+.main-title {
+  visibility: hidden;
+  font-size: 0;
+}
+
+.countries {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 50px;
+  padding-left: 600px;
+}
+
+.countries__title {
+  font-weight: 600;
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.countries__search-input {
+  width: 500px;
+  border-radius: 8px;
+  border: 2px solid rgb(3, 3, 59);
+  padding: 10px;
+  font-size: 22px;
+}
+
+.countries__list {
+  list-style: url(../images/earth.svg);
+  list-style-position: inside;
+
+  padding: 0;
+}
+
+li {
+  line-height: 1;
+  font-size: 26px;
+  margin-bottom: 16px;
+}
