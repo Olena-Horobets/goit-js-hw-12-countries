@@ -1,35 +1,58 @@
-body {
-  font-family: 'Titillium Web', sans-serif;
+html {
+  box-sizing: border-box;
+  overflow-y: overlay;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Titillium Web', sans-serif;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+// Primary markup
 .main-title {
   visibility: hidden;
   font-size: 0;
 }
 
 .countries {
-  display: flex;
+  display: inline-flex;
+  width: 500px;
   flex-direction: column;
   align-items: flex-start;
-  padding-top: 50px;
-  padding-left: 600px;
+  justify-content: start;
 }
 
 .countries__title {
   font-weight: 600;
   font-size: 40px;
-  margin-top: 0;
   margin-bottom: 30px;
 }
 
 .countries__search-input {
-  width: 500px;
+  width: 100%;
   border-radius: 8px;
   border: 2px solid rgb(3, 3, 59);
-  padding: 10px;
+  padding: 10px 18px;
   font-size: 22px;
 }
 
+// Countries list
 .countries__list {
   list-style: url(../images/earth.svg);
   list-style-position: inside;
@@ -37,8 +60,74 @@ body {
   padding: 0;
 }
 
-li {
-  line-height: 1;
+.countries__item {
+  line-height: 1.2;
   font-size: 26px;
   margin-bottom: 16px;
+}
+
+// Country item card
+.country {
+  width: 400px;
+  padding: 32px 44px;
+  // border: 2px solid grey;
+  border-radius: 12px;
+  box-shadow: 2px 2px 4px lightgrey;
+  align-self: center;
+}
+
+.country__title {
+  margin-bottom: 24px;
+  font-size: 32px;
+}
+
+.country__flag {
+  width: 100%;
+  height: 160px;
+  margin-bottom: 24px;
+}
+.country__data {
+  font-size: 18px;
+  font-weight: 600;
+}
+.country__value {
+  font-size: 18px;
+}
+
+@counter-style fingers-count {
+  system: fixed;
+  symbols: url(../images/count1.svg) url(../images/count2.svg) url(../images/count3.svg);
+  suffix: ' ';
+}
+
+.country__lang-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  list-style-position: inside;
+}
+
+.country__lang-item {
+  margin-bottom: 8px;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.count-icon {
+  display: inline-block;
+  width: 36px;
+  height: 22px;
+  margin-right: 2px;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+$icons: 'count0', 'count1', 'count2', 'count3', 'count4', 'count5', 'count6', 'count7', 'count8',
+  'count9', 'count10';
+
+@each $countIcon in $icons {
+  .#{$countIcon} {
+    background-image: url('../images/#{$countIcon}.svg');
+  }
 }
