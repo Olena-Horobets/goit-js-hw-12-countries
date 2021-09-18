@@ -25,9 +25,19 @@
 
     <div class="countries">
       <h2 class="countries__title">Enter country name</h2>
-      <input class="countries__search-input js-input" type="text" name="query" autocomplete="off" />
+
+      <div class="wrapper">
+        <input
+          class="countries__search-input js-input"
+          type="text"
+          name="query"
+          autocomplete="off"
+        />
+        <button class="countries__btn" data-action="reset">Reset</button>
+      </div>
 
       <ul class="countries__list js-list"></ul>
+      <div class="country"></div>
     </div>
 
     <script src="./index.js"></script>

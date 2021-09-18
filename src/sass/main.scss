@@ -15,6 +15,7 @@ body {
   padding-bottom: 50px;
   display: flex;
   justify-content: center;
+  color: #3a3a3a;
 }
 
 h1,
@@ -44,19 +45,56 @@ p {
   margin-bottom: 30px;
 }
 
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
 .countries__search-input {
   width: 100%;
   border-radius: 8px;
-  border: 2px solid rgb(3, 3, 59);
+  border: 2px solid rgb(13, 36, 100);
   padding: 10px 18px;
   font-size: 22px;
+}
+
+.countries__btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  padding: 10px 20px;
+  font-size: 22px;
+  border-radius: 8px;
+  border: 2px solid rgb(3, 104, 104);
+  cursor: pointer;
+  background-color: rgb(7, 165, 165);
+  box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.418), inset -3px -3px 8px rgba(0, 0, 0, 0.418);
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transform: scale(1);
+
+  transition: background-color 150ms ease-out, transform 150ms ease-out;
+}
+
+.countries__btn:hover {
+  background-color: rgb(3, 104, 104);
+}
+
+.countries__btn:active {
+  background-color: rgb(27, 77, 216);
+  transform: scale(0.97);
+}
+
+.countries__btn:disabled {
+  opacity: 0.6;
 }
 
 // Countries list
 .countries__list {
   list-style: url(../images/earth.svg);
   list-style-position: inside;
-
   padding: 0;
 }
 
@@ -64,21 +102,32 @@ p {
   line-height: 1.2;
   font-size: 26px;
   margin-bottom: 16px;
+  cursor: pointer;
+  fill: currentColor;
+  transition: color 150ms ease-out, transform 150ms ease-out;
 }
 
+.countries__item:hover {
+  color: rgb(3, 104, 104);
+  background-color: #fff8e5;
+  border-radius: 4px;
+}
+
+.countries__item:active {
+  color: rgb(27, 77, 216);
+  transform: scale(0.97);
+}
 // Country item card
-.country {
-  width: 400px;
-  padding: 32px 44px;
-  // border: 2px solid grey;
+.country__card {
+  width: 380px;
+  padding: 28px 36px;
   border-radius: 12px;
   box-shadow: 2px 2px 4px lightgrey;
-  align-self: center;
 }
 
 .country__title {
   margin-bottom: 24px;
-  font-size: 32px;
+  font-size: 36px;
 }
 
 .country__flag {
@@ -86,18 +135,14 @@ p {
   height: 160px;
   margin-bottom: 24px;
 }
+
 .country__data {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 600;
 }
-.country__value {
-  font-size: 18px;
-}
 
-@counter-style fingers-count {
-  system: fixed;
-  symbols: url(../images/count1.svg) url(../images/count2.svg) url(../images/count3.svg);
-  suffix: ' ';
+.country__value {
+  font-size: 22px;
 }
 
 .country__lang-list {
@@ -113,14 +158,17 @@ p {
   line-height: 1;
 }
 
+.icon {
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .count-icon {
   display: inline-block;
   width: 36px;
   height: 22px;
   margin-right: 2px;
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 
 $icons: 'count0', 'count1', 'count2', 'count3', 'count4', 'count5', 'count6', 'count7', 'count8',
@@ -130,4 +178,16 @@ $icons: 'count0', 'count1', 'count2', 'count3', 'count4', 'count5', 'count6', 'c
   .#{$countIcon} {
     background-image: url('../images/#{$countIcon}.svg');
   }
+}
+
+.fa-poop {
+  background-image: url(../images/poop.svg);
+}
+
+.fa-like {
+  background-image: url(../images/like.svg);
+}
+
+.fa-bell {
+  background-image: url(../images/bell.svg);
 }

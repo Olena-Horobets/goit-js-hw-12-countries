@@ -1,5 +1,5 @@
 {{#each this}}
-  <article class='country'>
+  <article class='country__card'>
     <h3 class='country__title'>{{name}}</h3>
     <img class='country__flag' src='{{flag}}' alt='country flag' />
     <p>
@@ -16,7 +16,7 @@
     <ul class='country__lang-list'>
       {{#each languages}}
         <li class='country__lang-item'><span
-            class='count-icon count{{@index}}'
+            class='icon count-icon count{{@index}}'
           ></span>{{this.name}}</li>
       {{/each}}
     </ul>
