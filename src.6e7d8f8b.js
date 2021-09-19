@@ -36,4 +36,4 @@ var e,t=arguments[3];!function(t,r){"object"==typeof exports&&"object"==typeof m
 },{"./fetch-countries":"bOLx"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss");var e=require("lodash"),t=require("notiflix"),r=u(require("./js/refs")),s=require("./js/fetch-countries"),n=u(require("./js/get-name-from-list.js"));function u(e){return e&&e.__esModule?e:{default:e}}function a(e){t.Loading.standard(),(0,s.fetchCountries)(e.target.value)}function i(e){r.default.searchInput.value="",(0,s.onMarkupRender)(),r.default.resetBtn.disabled=!0}r.default.searchInput.addEventListener("input",(0,e.debounce)(a,500)),r.default.countriesList.addEventListener("click",n.default),r.default.resetBtn.addEventListener("click",i),r.default.resetBtn.disabled=!0;
 },{"./sass/main.scss":"clu1","lodash":"B1iE","notiflix":"oIzc","./js/refs":"VyiV","./js/fetch-countries":"bOLx","./js/get-name-from-list.js":"pydw"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-12-countries/src.adb8f3cc.js.map
+//# sourceMappingURL=/goit-js-hw-12-countries/src.6e7d8f8b.js.map
