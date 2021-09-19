@@ -16,6 +16,7 @@ body {
   display: flex;
   justify-content: center;
   color: #3a3a3a;
+  background-color: #fdfaef;
 }
 
 h1,
@@ -42,7 +43,7 @@ p {
 .countries__title {
   font-weight: 600;
   font-size: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
 .wrapper {
@@ -56,6 +57,13 @@ p {
   border: 2px solid rgb(13, 36, 100);
   padding: 10px 18px;
   font-size: 22px;
+  margin-bottom: 24px;
+}
+
+.countries__search-input:focus {
+  border: 2px solid rgb(3, 104, 104);
+  outline: none;
+  box-shadow: 2px 2px 4px rgb(204, 204, 204);
 }
 
 .countries__btn {
@@ -96,12 +104,14 @@ p {
   list-style: url(../images/earth.svg);
   list-style-position: inside;
   padding: 0;
+  margin: 0;
 }
 
 .countries__item {
   line-height: 1.2;
+  padding: 6px 6px;
+  margin-bottom: 8px;
   font-size: 26px;
-  margin-bottom: 16px;
   cursor: pointer;
   fill: currentColor;
   transition: color 150ms ease-out, transform 150ms ease-out;
@@ -109,8 +119,9 @@ p {
 
 .countries__item:hover {
   color: rgb(3, 104, 104);
-  background-color: #fff8e5;
+  background-color: #fff2d0;
   border-radius: 4px;
+  box-shadow: 1px 1px 3px rgb(161, 161, 161);
 }
 
 .countries__item:active {
@@ -122,7 +133,8 @@ p {
   width: 380px;
   padding: 28px 36px;
   border-radius: 12px;
-  box-shadow: 2px 2px 4px lightgrey;
+  background-color: #fff;
+  box-shadow: 3px 3px 6px lightgrey;
 }
 
 .country__title {
@@ -134,6 +146,7 @@ p {
   width: 100%;
   height: 160px;
   margin-bottom: 24px;
+  box-shadow: 1px 1px 3px rgb(161, 161, 161);
 }
 
 .country__data {
