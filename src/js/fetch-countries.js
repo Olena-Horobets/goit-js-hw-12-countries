@@ -29,6 +29,7 @@ export function fetchCountries(searchQuery) {
         const markup = countryMarkupTpl(list);
         onMarkupRender('', markup);
         onServerResponse(success, 'Good job! Enjoy the service!');
+        refs.searchInput.value = '';
       }
     })
     .catch(err => {
