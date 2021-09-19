@@ -3,10 +3,10 @@ import { Notify, Loading } from 'notiflix';
 Notify.init({
   width: 'auto',
   position: 'right-top',
-  distance: '36px',
+  distance: '50px',
   opacity: 1,
   borderRadius: '8px',
-  timeout: 2000,
+  timeout: 2400,
   showOnlyTheLastOne: true,
 
   fontFamily: 'inherit',
@@ -20,13 +20,13 @@ Notify.init({
 
   success: {
     background: '#00A19D',
-    textColor: '#FFF8E5',
+    textColor: '#FFFFFF',
     fontAwesomeClassName: 'fas fa-like icon',
   },
 
   failure: {
     background: '#E05D5D',
-    textColor: '#FFF8E5',
+    textColor: '#FFFFFF',
     fontAwesomeClassName: 'fas fa-poop icon',
   },
 
