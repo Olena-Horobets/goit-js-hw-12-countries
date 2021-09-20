@@ -7,13 +7,19 @@ import { Notify, Loading } from 'notiflix';
 const { success, warning, failure, info } = Notify;
 const SEARCH_URL = 'https://restcountries.eu/rest/v2/name/';
 
-export function onMarkupRender(list = '', item = '') {
-  refs.countriesList.innerHTML = list;
-  refs.container.innerHTML = item;
+export function onInputReset(e) {
+  refs.searchInput.value = '';
+  onMarkupRender();
+  refs.resetBtn.disabled = true;
 }
 
 export function fetchCountries(searchQuery) {
   refs.resetBtn.disabled = false;
+  if (refs.searchInput.value === '') {
+    onInputReset();
+    Loading.remove();
+    return;
+  }
 
   return fetch(`${SEARCH_URL}${searchQuery}`)
     .then(res => res.json())
@@ -49,4 +55,9 @@ function getCountriesListMarkup(list) {
 function onServerResponse(cb, message) {
   cb(message);
   Loading.remove();
+}
+
+function onMarkupRender(list = '', item = '') {
+  refs.countriesList.innerHTML = list;
+  refs.container.innerHTML = item;
 }
